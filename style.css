@@ -1,0 +1,309 @@
+body {
+    background-color: beige;
+    font-family: 'Century Gothic', Courier, monospace;
+}
+
+.Header-Container-lvl2-title {
+    margin-top: 0%;
+    width: 100%;
+    height: 10vh;
+    font: #2b2c28;
+    font-family:'Century gothic', Courier, monospace;
+    font-size: 20px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255)(255, 255, 255) ;
+}
+
+
+.Paragraph-Container {
+    display: flex;
+    font: #2b2c28;
+    font-size: 30px; 
+    font-family: 'Century Gothic', Courier, monospace;
+}
+
+#large_font_pink {
+    font-size: 30px;
+    color: aqua;
+}
+
+    #large_font_pink a {
+        color: lightcoral;
+        text-decoration: none; /*removes underliner from link*/
+    }
+
+        #large_font_pink a:hover {
+            color: #F6BD60;
+            text-decoration: none; /*removes underliner from link*/
+        }
+
+
+#large_font_blue {
+    font-size: 30px;
+    color: aqua;
+}
+
+    #large_font_blue a {
+        color: #FEC89A;
+        text-decoration: none; /*removes underliner from link*/
+    }
+
+        #large_font_blue a:hover {
+            color: cornflowerblue;
+            text-decoration: none; /*removes underliner from link*/
+        }
+
+
+#large_font_green {
+    font-size: 30px;
+    color: red;
+}
+
+    #large_font_green a {
+        color: mediumaquamarine;
+        text-decoration: none; /*removes underliner from link*/
+    }
+
+        #large_font_green a:hover {
+            color: lightsalmon;
+            text-decoration: none; /*removes underliner from link*/
+        }
+
+
+
+
+
+
+
+
+
+
+
+/*HEADER - Navigation bar*/
+
+/*1 - main container*/
+.Header-Container-navigation-lvl1 {
+    /*Purpose - lock header to top when scrolling*/
+    /*Display and position*/
+    top: 0;
+    position: sticky;
+    /*alignment-Ft*/
+    z-index: 3;
+}
+
+/*3 header - navigation bar - Flex conatiner*/
+/*header class*/
+header.flex-container-lvl2-navigation {
+    /*Color/sizing-Bg (align flex box with partner container and set to size of parent*/
+
+    border: 2px solid white;
+    width: 100%;
+    height: 50%;
+}
+
+/* 4 header - navigation - list*/
+/*<nav> - links to other parts of page*/
+/*<Ul class - list of elements*/
+.Header-navigationlist-lvl4 {
+    border: 1px solid white;
+}
+
+    /*4 header - navigation - list - list items (each item element within list)*/
+    .Header-navigationlist-lvl4 li {
+        /*Display & position*/
+        display: inline; /*changes layout from vertical to horizontal*/
+        /*alignment-Bg*/
+        margin-right: 7%; /*adds space between items in list*/
+        margin-inline-start: 5%;
+
+        /*Styling*/
+        white-space: nowrap;
+        list-style: none; /*takes away bullet points*/
+    }
+
+        /*5 header - navigation - list - list items - a*/
+        .Header-navigationlist-lvl4 li a {
+            /*FONT*/
+            font-family: Courier New, Courier, monospace;
+            font-size: 100%; /*Fit text to size of container*/
+            color: white; /*color of link text*/
+            /*Transition between hover and non-hover*/
+            transition: ease-in-out 0.7s all;
+            /*styling*/
+            text-decoration: none; /*removes underliner from link*/
+        }
+
+            /*5 header - navigation - list - list items - a*/
+            .Header-navigationlist-lvl4 li a:hover {
+                /*FONT*/
+                color: black; /*color of link text*/
+                /*Transition between hover and non-hover*/
+                transition: ease-in-out 0.7s all;
+            }
+
+
+
+
+
+
+
+.ImageSideBySide{
+    display: flex;
+    padding: 5px;
+    background-color: beige;
+    
+}
+/*IMG-Article-Containers - individual containers that stack vertically within the vertical column lvl4. These house the Imgage container and article containers*/
+.Content-Container-karla {
+    /*Display and position*/
+    display: inline-block;
+    margin-bottom: 6%;
+    margin-top: 0%;
+    padding: 10px;
+    width: 35vw;
+    height: 40vw;
+    justify-content: left;
+    /*Font*/
+    font: #2b2c28;
+    font-size: 20px;
+    background-color: beige;
+}
+
+
+/*Image*/
+/*Container for Image with the Img-Article-Container*/
+#Content-Container-lvl8-Img img {
+    display: flex;
+    background-color: transparent;
+    padding: 1px;
+    border-radius: 25px;
+    border: black 3px solid;
+    background-color: beige;
+}
+
+
+
+/*Image*/
+/*Container for Image with the Img-Article-Container*/
+#Content-Container-lvl7-Img {
+    display: flex;
+    background-color: transparent;
+    padding: 3px;
+}
+    /*Image*/
+    #Content-Container-lvl7-Img img {
+        position: relative;
+        border-radius: 25px;
+        border: black 3px solid;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+     
+
+/*For landscape oriented images*/
+.image-container {
+    display: flex;
+    padding: 15px;
+}
+
+/*Image - links on home page*/
+#Content-Container-lvl6-Img {
+    display: flex;
+    background-color: tan;
+    padding: 3px;
+    border-radius: 25px;
+}
+        /*Image*/
+    #Content-Container-lvl6-Img img {
+        position: relative;
+        border-radius: 25%;
+        border: black 3px solid;
+        transition: all 0.5s ease-in-out;
+        opacity: 1;
+    }
+        /*Image - on hover - */
+        #Content-Container-lvl6-Img img:hover {
+            box-shadow: 3px 3px lavender;
+            bottom: -0.5%;
+            border-radius: 20%;
+            opacity: 0.5;
+            transition: all 0.5s ease-in-out;
+        }
+        /*Title of article - located in same flex box as image. It's displayed vertically*/
+        #Content-Container-lvl6-Img h2 {
+            writing-mode: vertical-rl;
+        }
+
+
+
+
+
+
+
+/*Word*/
+/*Words within the individual containers*/
+#Content-Container-lvl6-Words {
+    /*Display and position*/
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    /*Color/sizing/style-Bg*/
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 10px;
+    /*SUPER IMPORTANT - WRAPS TEXT WITHIN FLEX BOX*/
+    overflow-wrap: anywhere;
+}
+
+
+
+
+
+
+
+/*UI*/
+
+/*UI Right Side positioning - locked to right side.*/
+.UI-Container-lvl1-all {
+    display: inline-block; 
+    position: absolute;
+    font-family: 'Century Gothic';
+    right: 2vw;
+    height: 200vh;
+}
+
+/*UI Sticky Slider -  */
+.UI-sidebar-lvl1 {
+    transform: translate(0%,-20%);
+    position: sticky;
+    top: 0;
+    /*Color/sizing/style-Bg*/
+ 
+}
+
+/*UI Text container - container surrounding link list items. */
+.UI-LinksSection-lvl2 {
+    margin-block: auto;
+    margin-top: 20vh;
+    margin-left: -20px;
+    padding: 10px;
+    background: #FEC89A;
+    border-radius: 10px;
+}
+/*UI List*/
+.UI-LinksSection-lvl2 li {
+margin-bottom: 35px;
+font-size: 100%;
+list-style: none; /*remove bullets*/
+}
+/*Links within list*/
+.UI-LinksSection-lvl2 li a {
+    color: black;
+    transition: all 0.7s ease-in-out;
+    text-decoration: none; /*Removed underline*/
+}
+ /*Links within list on hover*/
+.UI-LinksSection-lvl2 li a:hover {
+    color: salmon;
+}
+
+            
