@@ -19,8 +19,7 @@ body {
 }
 
 h2 {
-    flex-basis: 100%;
-    padding: unset;
+    
 }
 
 .Paragraph-Container {
@@ -158,23 +157,24 @@ header.flex-container-lvl2-navigation {
 .ImageSideBySide {
     display: flex;
     padding: 5px;
-    background-color: beige;
-   
+    
+    justify-content: center;
+    gap: 5rem;
+
 }
 /*IMG-Article-Containers - individual containers that stack vertically within the vertical column lvl4. These house the Imgage container and article containers*/
 .Content-Container-karla {
     /*Display and position*/
-    display: inline-block;
+    display: flex;
     margin-bottom: 6%;
     margin-top: 0%;
-    padding: 10px;
     width: 35vw;
     height: 40vw;
-    justify-content: left;
+    justify-content: center;
+    
     /*Font*/
     font: #2b2c28;
     font-size: 20px;
-    background-color: beige;
 }
 
 
@@ -214,18 +214,27 @@ header.flex-container-lvl2-navigation {
 #Content-Container-lvl6-Img {
     display: flex;
     background-color: tan;
+    flex-direction: row; /* image left, vertical text right */
+    align-items: flex-start; /* align the top edges */
+    border-radius: 5%;
+    padding: 1px;
+    gap: 0.2rem;
 }
-    padding: 3px;
-    border-radius: 25px;
-}
+
+
+
         /*Image*/
-    #Content-Container-lvl6-Img img {
-        position: relative;
-        border-radius: 25%;
-        border: black 3px solid;
-        transition: all 0.5s ease-in-out;
-        opacity: 1;
-    }
+#Content-Container-lvl6-Img img {
+    border-radius: 25%;
+    border: black 3px solid;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+    width: 30vw;
+    height: 35vw;
+    object-fit: cover;
+    border-radius: 25%;
+    border: 3px solid black;
+}
         /*Image - on hover - */
         #Content-Container-lvl6-Img img:hover {
             box-shadow: 3px 3px lavender;
@@ -235,9 +244,16 @@ header.flex-container-lvl2-navigation {
             transition: all 0.5s ease-in-out;
         }
         /*Title of article - located in same flex box as image. It's displayed vertically*/
-        #Content-Container-lvl6-Img h2 {
-            writing-mode: vertical-rl;
-        }
+#Content-Container-lvl6-Img h2 {
+    writing-mode: vertical-rl; /* vertical text */
+    margin: 0; /* remove default h2 spacing */
+    padding: 1px; /* remove internal spacing */
+    padding-top: 10px;
+    line-height: 1; /* shrink extra space inside the text */
+    display: flex; /* treat text as flex content */
+    justify-content: flex-start; /* align text toward image */
+    font-size: 1.5rem;
+}
 
 
 

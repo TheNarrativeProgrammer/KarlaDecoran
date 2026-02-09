@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Ôªø<!DOCTYPE html>
 <html lang="en"><head>
     <title>karlas webpage</title>
     <link rel="stylesheet" href="style.css">
@@ -26,20 +26,7 @@
             </ul>
         </div>
 
-        <section id="intro">
-            <div style="padding: 20px;">
-                <img src="images/KarlaProfilePic.jpg" id="bioPic">
-            </div>
-            
-            <!--Opening Paragraph and links-->
-            <div class="Paragraph-Container">
-                <p>
-                    Hi, I'm <span id="large_font_pink"><a href="#bio"> Karla</a></span>.
-                    I'm an <span id="large_font_blue"><a href="Art.html"> artist</a></span> and a
-                    <span id="large_font_green"><a href="Design.html"> UX/UI designer</a></span>
-                </p>
-            </div>
-        </section>
+       
 
         <!--Sidebar-->
         <!--<div class="UI-Container-lvl1-all">
@@ -55,6 +42,352 @@
                 </section>
             </aside>
         </div>-->
+
+    <nav class="sidebar">
+    <ul>
+        <li><a href="#Wireframes">Wireframes</a></li>
+        
+    </ul>
+</nav>
+    <section id="Wireframes">
+    <h2></h2>
+    <div class="projects-container">
+        <div class="project max-width">
+            <h3>Wireframes</h3>
+
+            <h4>Opening Cut Scene</h4>
+            <div class="media-container">
+
+                <div class="image-container">
+                    <button class="prev btn-type-2">&#10094;</button>
+                    <!--<button class="prev">&#10094;</button>-->
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="Images/PurrfectMatch/Purrfect MatchLevel3_1.png" alt=""></div>
+                        <div class="carousel-slide"><img src="Images/PurrfectMatch/Purrfect MatchLevel3_2.png" alt=""></div>
+                        <div class="carousel-slide"><img src="Images/PurrfectMatch/PurrfectMatchLevel3_3.png" alt=""></div>
+                        <div class="carousel-slide"><img src="Images/PurrfectMatch/Purrfect MatchLevel3_1.png" alt=""></div>
+                        
+                    </div>
+                    <button class="next btn-type-2">&#10095;</button>
+                    <!--<button class="next">&#10095;</button>-->
+                </div>
+
+                <div class="codeDescription-container">
+                    <p data-slide="0">
+                        1.The Tank Frog‚Äôs laser uses a custom vertex and pixel shader applied to a high-poly static mesh composed of three cylinders.
+
+                        <br></br>Each cylinder uses a unique material instance for visual variation. The beam‚Äôs length is dynamically scaled along the X-axis through a parameter controlled by the particle system.
+                    </p>
+
+                    <p data-slide="1">
+                        2. The vertex shader uses two panning gradient masks to control displacement‚Äîone along the Y-axis for horizontal movement and one along the Z-axis for vertical motion.
+
+                        <br></br>Additional masking restricts motion to the beam‚Äôs center, keeping the ends stable.
+
+                        <br></br>The pixel shader applies three blended colors to create the appearance of a glowing, high-energy beam with translucent edges that prevent visual obstruction.
+                    </p>
+
+                    <p data-slide="2">
+                        3.The Params section organizes shader inputs for clarity and modularity. TexCoord offsets adjust which parts of the gradient masks are used.
+
+                        <br></br>Time scaling controls the beam‚Äôs wave frequency, while UVScalar fine-tunes the sharpness of the waveform‚Äîlower values produce smoother ‚ÄúU‚Äù-shaped motion, and higher values yield sharper ‚ÄúV‚Äù-shaped displacement.
+                    </p>
+
+                    <p data-slide="3">
+                        4.Offset TexCoords are fed into two gradient textures‚Äîone for vertical and one for horizontal displacement.
+                        NoiseScale parameters determine where the distortion occurs: values near 1 isolate movement to one side of the beam, while higher values spread the effect symmetrically.
+
+                        <br></br>This allows flexible artistic control over the laser‚Äôs directional distortion.
+                    </p>
+
+                    <p data-slide="4">
+                        5.DisplacementAmounts generate axis-specific Vector3 values, isolating movement to a single axis for precise directional control.
+                    </p>
+
+                    <p data-slide="5">
+                        6.The vertical and horizontal displacement gradients are normalized to a -1 to 1 range to match standard normal map values.
+                        These gradients are multiplied by their respective Vector3 masks, isolating movement along the Z-axis (blue channel) and Y-axis (green channel).
+
+                        <br></br>The teal nodes represent the completed vertex shader stage.
+
+
+                    </p>
+
+                    <p data-slide="6">
+                        7. The axis masks are combined with a center-weighted mask that restricts displacement to the beam‚Äôs middle. The resulting local-space displacement data is converted to world-space and output as the final vertex offset.
+
+                    </p>
+
+                    <p data-slide="7">
+                        8.Two gradients are multiplied to produce a mask that transitions from black edges to a bright center.
+                        This mask drives a lerp between EndScale (edge darkness) and CentreSwell (center brightness), allowing independent control of how much the center and edges animate.
+                    </p>
+
+                    <p data-slide="8">
+                        9.CentreSwell and DisplacementAmounts define the scale and direction of displacement. CentreSwell determines how much of the mask is affected (0 disables movement).
+
+                        DisplacementAmounts generate axis-specific Vector3 values, isolating movement to a single axis for precise directional control.
+
+                    </p>
+
+                    <p data-slide="9">
+                        10. Three separate masks control the beam‚Äôs color layers. An inverted mask corrects the texture format, while Fresnel and inverse Fresnel effects assign distinct colors to the beam‚Äôs edges and center.
+                        The SizeOfCentreColor parameter adjusts color dominance, blending between center-heavy or edge-heavy illumination.
+
+                    </p>
+
+                    <p data-slide="10">
+                        11. Each mask feeds into color parameters defining the beam‚Äôs primary hues. The colors are blended and normalized for the base color output.
+
+                    </p>
+
+                    <p data-slide="11">
+                        12. An enhanced mask refines emissive intensity and opacity for a luminous effect with a hot white centre.
+
+                    </p>
+
+                    <p data-slide="12">
+                        13. Each cylinder in the static mesh uses a unique material instance to create the final stylized, Ghostbusters-inspired laser beam.
+                    </p>
+
+
+                </div>
+            </div>
+
+            <h4>Tune Shader</h4>
+            <div class="media-container">
+
+                <div class="image-container">
+                    <button class="prev btn-type-2">&#10094;</button>
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneShader/Shaders_TuneShader_BeforeAfter_Img1.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneShader/Shaders_TuneShader_ShaderOverview_Img2.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneShader/Shaders_TuneShader_Phong_Img3.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneShader/Shaders_TuneShader_Stripes_Img4.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneShader/Shaders_TuneShader_TextureParams_Img5.gif" alt=""></div>
+
+                    </div>
+                    <button class="next btn-type-2">&#10095;</button>
+                </div>
+
+                <div class="codeDescription-container">
+                    <p data-slide="0" class="active">
+                        1. A toon-style pixel shader was developed to create consistent material instances across multiple environment actors. 
+                        This unified visual style maintained artistic cohesion and supported flexible parameter adjustments for different materials.
+                    </p>
+
+                    <p data-slide="1">
+                        2. The shader combines a Phong lighting calculation with a greyscale striping function.
+
+                        <br></br> These two layers are summed and then multiplied by a base texture, allowing lighting and shading variations to dynamically influence the final texture output.
+                    </p>
+
+                    <p data-slide="2">
+                        3. A standard Phong model computes diffuse, ambient, and specular components, giving the surface its stylized lighting response while maintaining a simplified, toon-inspired look.
+                    </p>
+
+                    <p data-slide="3">
+                        4.A dot product is used to calculate light direction and shadow falloff.
+
+                        <br></br>The range is adjusted so the darkest shadows fall near the object‚Äôs base. By flooring the range and scaling by a fractional constant (e.g., 0.16), the shader creates discrete grey bands, producing the stylized cel-shaded striping effect.
+                    </p>
+
+                    <p data-slide="4">
+                        5. The resulting striped mask is applied to the material‚Äôs texture parameter, allowing each material instance to define its own variation while maintaining the same toon-shaded lighting structure.
+                    </p>
+                    
+                </div>
+            </div>
+
+
+            <h4>Postprocessing Tune Outline</h4>
+            <div class="media-container">
+
+                <div class="image-container">
+                    <button class="prev btn-type-2">&#10094;</button>
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_BeforeAfter_Img1.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_Overview_Img2.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_DetectEdges_Img3.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_WhiteEdges_Img4.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_WhiteEdgesGreyScale_Img5.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_BlackEdges_Img6.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_WhiteEdgesDepth_Img7.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_FoundEdgesDepth_Img8.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/TuneOutline/Shaders_TuneOutline_Final_Img9.png" alt=""></div>
+                    </div>
+                    <button class="next btn-type-2">&#10095;</button>
+                </div>
+
+                <div class="codeDescription-container">
+                    <p data-slide="0">
+                        1. A black outline effect is achieved through a post-processing pixel shader using two edge detection techniques.
+                        The first compares normal differences between neighboring pixels, and the second measures variations in scene depth.
+
+                        <br></br> The maximum value between both methods determines the final outline intensity, producing clean and dynamic edges.
+                    </p>
+
+                    <p data-slide="1">
+                        2. The shader first samples the surrounding pixels, then calculates normal and depth differences for each neighboring pixel. 
+                        These calculations feed into the two edge detection passes‚Äîone based on normals and one based on scene depth.
+
+                    </p>
+
+                    <p data-slide="2">
+                        3. Four Vector2 offsets define pixel sampling positions (up, down, left, and right). These are scaled by a line thickness parameter and normalized by the screen resolution to represent one pixel in UV space.
+
+                        <br></br> Sampling SceneTexture:WorldNormal at these UVs retrieves normal data for the neighboring pixels, used in edge comparison.
+                    </p>
+
+                    <p data-slide="3">
+                        4. Normal vectors are remapped from a -1‚Äì1 range to 0‚Äì1 for accurate comparison.
+
+                        <br></br>The differences between opposing samples (top-bottom and left-right) are calculated, their absolute values summed, and the result highlights strong normal variations as white edges.
+                    </p>
+
+                    <p data-slide="4">
+                        5. The shader isolates edges by selecting the maximum channel value among the RGB components, converting the result to greyscale.
+
+                        <br></br> A SmoothStep function thresholds the output between 0.2 and 0.7, eliminating mid-range values to produce a clean black-and-white edge mask, removing noise from curved surfaces.
+                    </p>
+
+                    <p data-slide="5">
+                        6. The resulting FoundEdgeNormals mask now contains clean white outlines derived from normal differences.
+
+                        <br></br> This mask is used as the alpha in a lerp between black and the unaltered scene texture, overlaying black outlines onto the render.
+
+                        <br></br> This concludes the first edge detection technique.
+                    </p>
+
+                    <p data-slide="6">
+                        7. The same offset UVs are used to sample SceneDepth, comparing neighboring pixels to detect significant depth changes.
+
+                        <br></br> The max of all four depths is calculated and passed as LargestDepth. 
+                    </p>
+
+                    <p data-slide="7">
+                        8. Divide WhiteEdgeDepth is divided by LargestDepth to normalize the result making the differences in depth relative to the deepest depth in scene.
+
+                        <br></br>A smooth step gives clean separation of the lines.
+                    </p>
+
+                    <p data-slide="8">
+                        9. The normal-based and depth-based edge masks are combined using a max function, ensuring all detected edges are included in the final outline.
+                    </p>
+                </div>
+            </div>
+
+
+            <h4>Acid Bubble Attack</h4>
+            <div class="media-container">
+
+                <div class="image-container">
+                    <button class="prev btn-type-2">&#10094;</button>
+                    <div class="carousel-track">
+                        <div class="carousel-slide"><img src="Images/PurrfectMatch/Purrfect MatchLevel3_1.png"" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Purrfect MatchLevel3_1.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_TexCoordsParamsCallBubble_Img3.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_BubbleAnimOverview_Img4.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_BubbleAnimNormalsRange_Img5.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_BubbleAnim_MaskAnim_Img6.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_BubbleAnim_MaskAnimStatic_Img7.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_BubbleAnim_MaskTopOnly_Img8.png" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_BubbleAnim_Output_Img9.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_Normals_Img10.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_PurpleWeb_Img11.gif" alt=""></div>
+                        <div class="carousel-slide"><img src="images/Frogs/Shaders/AcidBubbleAttack/Shaders_PinnerBubble_Final_Img12.gif" alt=""></div>
+                    </div>
+                    <button class="next btn-type-2">&#10095;</button>
+                </div>
+
+                <div class="codeDescription-container">
+                    <p data-slide="0">
+                        1. The ‚ÄúPinner‚Äù frog‚Äôs acid bubble uses a custom vertex and pixel shader.
+
+                        <br></br> A shared material function drives the bubbling animation, creating the illusion of surface tension and popping bubbles. This function is also reused in the Acid Liquid shader for consistent visual behavior.
+                    </p>
+
+                    <p data-slide="1">
+                        2. The left section defines shader parameters and two independently panned TexCoords.
+
+                        <br></br> The central code handles bubble animation through the shared material function, while the right section generates the purple subsurface web and emissive color.
+
+                        <br></br> The lower nodes enhance normal intensity for popping bubbles and drive vertex displacement for side wave motion.
+                    </p>
+
+                    <p data-slide="2">
+                        3. TexCoords are tiled using BubbleTileAmount and animated diagonally at a rate set by RotationSpeed. These coordinates drive normal and noise textures that determine bubble pop timing.
+
+                    </p>
+
+                    <p data-slide="3">
+                        4. The upper-left section generates the animated normal map.
+
+                        <br></br> The middle-left portion builds the dynamic bubble pop mask, while the lower-left code defines which bubbles remain static versus animated.
+
+                        <br></br> On the right, a separate mask restricts the effect to the top of the object, with a selector controlling whether bubbles appear only on the surface top or across the entire mesh.
+                    </p>
+
+                    <p data-slide="4">
+                        5. The red and green texture channels store normal map data, which are combined into a Vector2 and remapped from a 0‚Äì1 to a -1‚Äì1 range for accurate normal calculation.
+                    </p>
+
+                    <p data-slide="5">
+                        6. The blue and alpha channels store two animation masks.
+
+                        <br></br> The blue mask is animated using time subtraction and a Frac function to maintain a 0‚Äì1 range, then multiplied by the alpha mask to create the final composite animation mask controlling bubble visibility.
+                    </p>
+
+                    <p data-slide="6">
+                        7. A static filter mask excludes specific bubbles from the animation cycle.
+
+                        <br></br> This static mask is then added with the animated mask to determine which bubbles remain static and which animate dynamically.
+                    </p>
+
+                    <p data-slide="7">
+                        8. A top-only bubble mask is generated by isolating vertex normals pointing upward, using the blue channel of the normal map to confine the effect to surfaces facing the world‚Äôs Z-axis.
+                    </p>
+
+                    <p data-slide="8">
+                        9. The ApplyTopOnly parameter switches between full-surface and top-only masks.
+
+                        <br></br> The SmoothDrop control blends between a default bubble intensity of 1 and a smoother, more diffused transition to soften the bubble edges.
+                    </p>
+
+                    <p data-slide="9">
+                        10. The bubble normal map (V3NormalsMapBlueChannelEmpty) is scaled by BubbleNormalScalar to amplify bubble extrusion.
+
+                        <br></br> This result is blended with animated normals and flattened to produce the final composite normal map.
+
+                        <br></br> A gradient mask restricts vertex displacement to the sphere‚Äôs center.
+
+                        <br></br>A panning NoiseMap, multiplied by this mask and scaled by WaveHeight, offsets each vertex along its normal, creating subtle surface waves forming the WorldPositionOffset output.
+                    </p>
+
+                    <p data-slide="10">
+                        11. A secondary texture generates a purple web pattern beneath the surface using independently offset and rotated TexCoords to layer the effect.
+
+                        <br></br> This PurpleWeb texture is tiled and color-tinted, then blended with the bubble base color and emissive texture generated by MF_BubbleAnimation, forming the BaseColorAndEmissive output.
+                    </p>
+
+                    <p data-slide="11">
+                        12. The final material produces a rotating, bubbling acid sphere with subtle surface waves.
+
+                        <br></br> The same MF_BubbleAnimation and layering principles were reused for M_AcidLiquid, enhanced with a custom-built Gerstner wave function to simulate fluid surface motion.
+                    </p>
+                </div>
+            </div>
+
+
+            <h4>Tech </h4>
+            <div class="tech-skill">
+                <div class="tech-box">Vertex Shader</div>
+                <div class="tech-box">Pixel Shader</div>
+                <div class="tech-box">Material Functions</div>
+            </div>
+
+        </div>
+</section>
 
         <section id="portfolio">
 
@@ -176,7 +509,7 @@
                 <div class="project full-width">
                     <div class="media-container">
                         <!--<h3>Attack Tokens</h3>-->
-                        <h2>3</h2>
+                        <h2>Hello</h2>
                         <div class="image-container">
                             <button class="prev btn-type-2">&#10094;</button>
                             <div class="carousel-track">
@@ -202,7 +535,7 @@
                             <p data-slide="0">
                                 1. The Attack Token system consists of two core components: AttackTokenGiverComponent and AttackTokenRequesterComponent.
 
-                                <br></br> The GiverComponent is attached to any actor that can be attacked ó typically ACharacterBasePlayer or AGenerator ó and is responsible for distributing attack tokens.
+                                <br></br> The GiverComponent is attached to any actor that can be attacked ‚Äî typically ACharacterBasePlayer or AGenerator ‚Äî and is responsible for distributing attack tokens.
 
                                 <br></br> Enemy classes that require a token to engage (such as Flushers and Pinners) use the RequesterComponent to request and return tokens.
 
@@ -218,7 +551,7 @@
                             </p>
 
                             <p data-slide="2">
-                                3. SetUpAttachments() creates six keyed entries in _mmTokenDataAttackLocations: indices 0ñ2 for Flushers and 3ñ5 for Pinners.
+                                3. SetUpAttachments() creates six keyed entries in _mmTokenDataAttackLocations: indices 0‚Äì2 for Flushers and 3‚Äì5 for Pinners.
 
                                 <br></br>AddAttackLocationToMap() then iterates over temporary arrays of these scene components, constructing a new FGiverAttackTokenData for each and setting its initial token capacity and availability.
 
@@ -229,18 +562,18 @@
                             <p data-slide="3">
                                 4. An interface complements the AttackTokenGiverComponent, enabling enemies to request and return tokens or query valid attack locations without direct coupling.
 
-                                <br></br>ACharacterBasePlayer implements this interface, using its helper functions to call the GiverComponentís internal logic directly.
+                                <br></br>ACharacterBasePlayer implements this interface, using its helper functions to call the GiverComponent‚Äôs internal logic directly.
                                 This interface-driven design ensures clean, modular communication between requesters and their attack targets.
                             </p>
 
                             <p data-slide="4">
-                                5. The AttackTokenRequesterComponent is attached to both Flusher and Pinner enemies. Each type has its own maRequestedTokenIndex array, defining which attack endpoints (0ñ2 or 3ñ5) it may use.
+                                5. The AttackTokenRequesterComponent is attached to both Flusher and Pinner enemies. Each type has its own maRequestedTokenIndex array, defining which attack endpoints (0‚Äì2 or 3‚Äì5) it may use.
 
                                 <br></br>The component also maintains a map _mmTakenAttackTokens, keyed by the attack target AActor, storing an FRequesterGeneralTokenData struct with all tokens the requester currently holds.
                             </p>
 
                             <p data-slide="5">
-                                6.The RequesterComponent includes its own interface, used by both the Behavior Treeís Blackboard tasks and the attack targets themselves.
+                                6.The RequesterComponent includes its own interface, used by both the Behavior Tree‚Äôs Blackboard tasks and the attack targets themselves.
 
                                 <br></br> This interface standardizes token request, reservation, and return workflows, streamlining AI communication during combat sequences.
                             </p>
@@ -255,25 +588,25 @@
                             </p>
 
                             <p data-slide="7">
-                                8. FRequesterGeneralTokenData represents each requesterís stored token data within _mmTakenAttackTokens.
+                                8. FRequesterGeneralTokenData represents each requester‚Äôs stored token data within _mmTakenAttackTokens.
 
                                 <br></br>When a request is made, HandleReserveTokenRequest() processes the attempt and returns a success flag.
 
                                 <br></br> GetSenseIDofSenseAsEnum(), checks if the AI has sight perception info on the player character.
 
-                                <br></br>If successful, IsTokenRequestSuccessful() updates the requesterís FRequesterReservation struct with the new tokenís index and attack location.
+                                <br></br>If successful, IsTokenRequestSuccessful() updates the requester‚Äôs FRequesterReservation struct with the new token‚Äôs index and attack location.
                                 <br></br>The updated reservation is then saved back into _mmTakenAttackTokens via ReserveAttackTokenAndStoreInMap(), synchronizing local and giver-side data.
                             </p>
 
                             <p data-slide="8">
-                                9. The attack targetís interface function HandleReserveTokenRequest() delegates to the GiverComponentís internal method of the same name.
+                                9. The attack target‚Äôs interface function HandleReserveTokenRequest() delegates to the GiverComponent‚Äôs internal method of the same name.
 
-                                <br></br>Flushers request attack indices 0ñ2, while Pinners use 3ñ5. Validation ensures team members never request invalid indices.
+                                <br></br>Flushers request attack indices 0‚Äì2, while Pinners use 3‚Äì5. Validation ensures team members never request invalid indices.
 
                                 <br></br> Each FGiverAttackTokenData entry stores a dereferenced pointer to its map data, allowing direct modification.
 
                                 <br></br>The Giver iterates through available slots, confirming capacity and token count.
-                                If tokens are available, both the Giverís map and the Requesterís reservation data are updated, returning true on success or false if the request fails.
+                                If tokens are available, both the Giver‚Äôs map and the Requester‚Äôs reservation data are updated, returning true on success or false if the request fails.
                             </p>
 
                             <p data-slide="9">
@@ -296,7 +629,7 @@
                             <p data-slide="11">
                                 12. ReturnAttackTokens() retrieves the relevant FRequesterGeneralTokenData reference tied to the AttackTarget.
 
-                                <br></br> It then calls HandleReturningToken() on the target actor, specifying the index and quantity to return. The Giverís map is updated accordingly.
+                                <br></br> It then calls HandleReturningToken() on the target actor, specifying the index and quantity to return. The Giver‚Äôs map is updated accordingly.
 
                                 <br></br> Finally, the requester removes that token entry from its _mmTakenAttackTokens map, ensuring data integrity on both sides.
                             </p>
@@ -304,7 +637,7 @@
                             <p data-slide="12">
                                 13. Tokens are also returned when an enemy finishes its attack sequence.
 
-                                <br></br> BTT_AttackFlusher calls AttackBehaviour() ó an IFrogAIable interface function implemented at the child-class level ó which in turn executes the enemyís specific Attack() logic.
+                                <br></br> BTT_AttackFlusher calls AttackBehaviour() ‚Äî an IFrogAIable interface function implemented at the child-class level ‚Äî which in turn executes the enemy‚Äôs specific Attack() logic.
 
                                 <br></br> Once the attack concludes, the AI automatically returns its tokens before signaling completion through the appropriate delegate.
                             </p>
@@ -333,7 +666,7 @@
                     <h2>1</h2>
                     <div class="projects-container">
                         <div class="project max-width">
-                            <h4>2</h4>
+                            <h4>Hello</h4>
                             <div class="media-container">
                                 <!--<h3>Attack Tokens</h3>-->
                                 
@@ -362,7 +695,7 @@
                                     <p data-slide="0">
                                         1. The Attack Token system consists of two core components: AttackTokenGiverComponent and AttackTokenRequesterComponent.
 
-                                        <br></br> The GiverComponent is attached to any actor that can be attacked ó typically ACharacterBasePlayer or AGenerator ó and is responsible for distributing attack tokens.
+                                        <br></br> The GiverComponent is attached to any actor that can be attacked ‚Äî typically ACharacterBasePlayer or AGenerator ‚Äî and is responsible for distributing attack tokens.
 
                                         <br></br> Enemy classes that require a token to engage (such as Flushers and Pinners) use the RequesterComponent to request and return tokens.
 
@@ -378,7 +711,7 @@
                                     </p>
 
                                     <p data-slide="2">
-                                        3. SetUpAttachments() creates six keyed entries in _mmTokenDataAttackLocations: indices 0ñ2 for Flushers and 3ñ5 for Pinners.
+                                        3. SetUpAttachments() creates six keyed entries in _mmTokenDataAttackLocations: indices 0‚Äì2 for Flushers and 3‚Äì5 for Pinners.
 
                                         <br></br>AddAttackLocationToMap() then iterates over temporary arrays of these scene components, constructing a new FGiverAttackTokenData for each and setting its initial token capacity and availability.
 
@@ -389,18 +722,18 @@
                                     <p data-slide="3">
                                         4. An interface complements the AttackTokenGiverComponent, enabling enemies to request and return tokens or query valid attack locations without direct coupling.
 
-                                        <br></br>ACharacterBasePlayer implements this interface, using its helper functions to call the GiverComponentís internal logic directly.
+                                        <br></br>ACharacterBasePlayer implements this interface, using its helper functions to call the GiverComponent‚Äôs internal logic directly.
                                         This interface-driven design ensures clean, modular communication between requesters and their attack targets.
                                     </p>
 
                                     <p data-slide="4">
-                                        5. The AttackTokenRequesterComponent is attached to both Flusher and Pinner enemies. Each type has its own maRequestedTokenIndex array, defining which attack endpoints (0ñ2 or 3ñ5) it may use.
+                                        5. The AttackTokenRequesterComponent is attached to both Flusher and Pinner enemies. Each type has its own maRequestedTokenIndex array, defining which attack endpoints (0‚Äì2 or 3‚Äì5) it may use.
 
                                         <br></br>The component also maintains a map _mmTakenAttackTokens, keyed by the attack target AActor, storing an FRequesterGeneralTokenData struct with all tokens the requester currently holds.
                                     </p>
 
                                     <p data-slide="5">
-                                        6.The RequesterComponent includes its own interface, used by both the Behavior Treeís Blackboard tasks and the attack targets themselves.
+                                        6.The RequesterComponent includes its own interface, used by both the Behavior Tree‚Äôs Blackboard tasks and the attack targets themselves.
 
                                         <br></br> This interface standardizes token request, reservation, and return workflows, streamlining AI communication during combat sequences.
                                     </p>
@@ -415,25 +748,25 @@
                                     </p>
 
                                     <p data-slide="7">
-                                        8. FRequesterGeneralTokenData represents each requesterís stored token data within _mmTakenAttackTokens.
+                                        8. FRequesterGeneralTokenData represents each requester‚Äôs stored token data within _mmTakenAttackTokens.
 
                                         <br></br>When a request is made, HandleReserveTokenRequest() processes the attempt and returns a success flag.
 
                                         <br></br> GetSenseIDofSenseAsEnum(), checks if the AI has sight perception info on the player character.
 
-                                        <br></br>If successful, IsTokenRequestSuccessful() updates the requesterís FRequesterReservation struct with the new tokenís index and attack location.
+                                        <br></br>If successful, IsTokenRequestSuccessful() updates the requester‚Äôs FRequesterReservation struct with the new token‚Äôs index and attack location.
                                         <br></br>The updated reservation is then saved back into _mmTakenAttackTokens via ReserveAttackTokenAndStoreInMap(), synchronizing local and giver-side data.
                                     </p>
 
                                     <p data-slide="8">
-                                        9. The attack targetís interface function HandleReserveTokenRequest() delegates to the GiverComponentís internal method of the same name.
+                                        9. The attack target‚Äôs interface function HandleReserveTokenRequest() delegates to the GiverComponent‚Äôs internal method of the same name.
 
-                                        <br></br>Flushers request attack indices 0ñ2, while Pinners use 3ñ5. Validation ensures team members never request invalid indices.
+                                        <br></br>Flushers request attack indices 0‚Äì2, while Pinners use 3‚Äì5. Validation ensures team members never request invalid indices.
 
                                         <br></br> Each FGiverAttackTokenData entry stores a dereferenced pointer to its map data, allowing direct modification.
 
                                         <br></br>The Giver iterates through available slots, confirming capacity and token count.
-                                        If tokens are available, both the Giverís map and the Requesterís reservation data are updated, returning true on success or false if the request fails.
+                                        If tokens are available, both the Giver‚Äôs map and the Requester‚Äôs reservation data are updated, returning true on success or false if the request fails.
                                     </p>
 
                                     <p data-slide="9">
@@ -456,7 +789,7 @@
                                     <p data-slide="11">
                                         12. ReturnAttackTokens() retrieves the relevant FRequesterGeneralTokenData reference tied to the AttackTarget.
 
-                                        <br></br> It then calls HandleReturningToken() on the target actor, specifying the index and quantity to return. The Giverís map is updated accordingly.
+                                        <br></br> It then calls HandleReturningToken() on the target actor, specifying the index and quantity to return. The Giver‚Äôs map is updated accordingly.
 
                                         <br></br> Finally, the requester removes that token entry from its _mmTakenAttackTokens map, ensuring data integrity on both sides.
                                     </p>
@@ -464,7 +797,7 @@
                                     <p data-slide="12">
                                         13. Tokens are also returned when an enemy finishes its attack sequence.
 
-                                        <br></br> BTT_AttackFlusher calls AttackBehaviour() ó an IFrogAIable interface function implemented at the child-class level ó which in turn executes the enemyís specific Attack() logic.
+                                        <br></br> BTT_AttackFlusher calls AttackBehaviour() ‚Äî an IFrogAIable interface function implemented at the child-class level ‚Äî which in turn executes the enemy‚Äôs specific Attack() logic.
 
                                         <br></br> Once the attack concludes, the AI automatically returns its tokens before signaling completion through the appropriate delegate.
                                     </p>
@@ -647,7 +980,7 @@
                     </a>
                 </div>
 
-                <p class="copyright">© Reid Gillis 2022ñ2025</p>
+                <p class="copyright">¬© Reid Gillis 2022‚Äì2025</p>
             </footer>
 
 
