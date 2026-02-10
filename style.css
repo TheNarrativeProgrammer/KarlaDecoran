@@ -24,57 +24,11 @@ h2 {
 
 .Paragraph-Container {
     display: flex;
-    font: #2b2c28;
     font-size: 30px; 
     font-family: 'Century Gothic', Courier, monospace;
 }
 
-#large_font_pink {
-    font-size: 30px;
-    color: aqua;
-}
 
-    #large_font_pink a {
-        color: lightcoral;
-        text-decoration: none; /*removes underliner from link*/
-    }
-
-        #large_font_pink a:hover {
-            color: #F6BD60;
-            text-decoration: none; /*removes underliner from link*/
-        }
-
-
-#large_font_blue {
-    font-size: 30px;
-    color: aqua;
-}
-
-    #large_font_blue a {
-        color: #FEC89A;
-        text-decoration: none; /*removes underliner from link*/
-    }
-
-        #large_font_blue a:hover {
-            color: cornflowerblue;
-            text-decoration: none; /*removes underliner from link*/
-        }
-
-
-#large_font_green {
-    font-size: 30px;
-    color: red;
-}
-
-    #large_font_green a {
-        color: mediumaquamarine;
-        text-decoration: none; /*removes underliner from link*/
-    }
-
-        #large_font_green a:hover {
-            color: lightsalmon;
-            text-decoration: none; /*removes underliner from link*/
-        }
 
 
 
@@ -341,14 +295,16 @@ body {
     
 }
 
+
 a {
     text-decoration: none;
-    color: #4EC5AF; 
+    color: #76E6C9; /* lighter mint hover */
     transition: all 0.5s;
+    text-shadow: -1px 1px 0px #2A475E; /* subtle shadow */
 }
 
     a:hover {
-        color: #76E6C9; /* lighter mint hover */
+        color: #CDEAC0;
     }
 
 html {
@@ -730,7 +686,10 @@ video {
     top: 0;
     left: 0;
     text-align: center;
-    background: #3B2A1A; /* very dark blue navbar */
+    /*background: #ffac81; 
+    background: #ff928b;*/
+    background: #ff928b;
+    
     font-size: 150%;
     z-index: 1000;
 }
@@ -803,8 +762,7 @@ section.nopadding{
     gap: 2rem;
     flex-wrap: wrap; /* allow stacking on small screens */
     padding: 5vh 5%;
-    background-color: tan;
-    color: #FFEB99;
+    background: #fec3a6;
     text-align: center;
 }
 
@@ -826,9 +784,6 @@ section.nopadding{
         padding-top: 1vh;
     }
 
-    #intro a:hover {
-        color: #76E6C9; /* link hover in intro */
-    }
 
     #intro #bioPic {
         flex: 0 0 200px;
@@ -1218,7 +1173,7 @@ footer {
     position: fixed;
     top: 300px; /* adjust to match navbar height */
     width: 180px; /* slightly smaller */
-    background-color: tan; /* your palette */
+    background: #fec3a6;
     padding: 15px 10px;
     border: 2px solid #f2a467;
     border-radius: 10px;
@@ -1241,7 +1196,7 @@ footer {
             .sidebar ul li a {
                 margin: 0;
                 text-decoration: none;
-                color: #ffe183; /* default link color */
+                color: #CDEAC0;
                 font-weight: bold;
                 font-size: 1em;
                 padding: 6px 8px;
@@ -1256,20 +1211,19 @@ footer {
 
                 .sidebar ul li a.active {
                     background-color: #ffe183; /* highlight active link */
-                    color: #250a57;
+                    color: #CDEAC0;
                 }
 
     .sidebar a {
         display: block;
         margin: 10px 0;
-        color: #ffe183; /* default link color */
         text-decoration: none;
         font-weight: bold;
         transition: color 0.3s;
     }
 
         .sidebar a.active {
-            color: #ff7f50; /* highlight when in section */
+            
         }
 
 @media (max-width: 1024px) {
