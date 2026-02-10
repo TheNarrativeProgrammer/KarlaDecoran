@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
    EMAIL COPY FALLBACK
 ============================================================ */
     const emailLink = document.getElementById("emailLink")
-    const emailAddress = "pg27reid@vfs.com"
+    const emailAddress = "karladecoran@gmail.com"
 
     emailLink?.addEventListener("click", async e => {
         e.preventDefault()
