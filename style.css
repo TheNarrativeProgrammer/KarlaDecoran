@@ -1196,7 +1196,8 @@ footer {
             .sidebar ul li a {
                 margin: 0;
                 text-decoration: none;
-                color: #CDEAC0;
+                
+                color: #76E6C9; /* lighter mint hover */
                 font-weight: bold;
                 font-size: 1em;
                 padding: 6px 8px;
