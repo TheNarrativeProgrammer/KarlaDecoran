@@ -1,7 +1,6 @@
 body {
     background-color: beige;
-    
-    font-family: 'Century Gothic', Courier, monospace;
+    font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     align-content: center;
     justify-content: center;
     display: flex;
@@ -11,9 +10,9 @@ body {
 .Header-Container-lvl2-title {
     margin-top: 0%;
     width: 100%;
-    height: 10vh;font: #2b2c28;
-    font-family:'Century gothic', Courier, monospace;
-    
+    height: 10vh;
+    font: #2b2c28;
+    font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     font-size: 20px;
     z-index: 2;
 }
@@ -24,8 +23,8 @@ h2 {
 
 .Paragraph-Container {
     display: flex;
-    font-size: 30px; 
-    font-family: 'Century Gothic', Courier, monospace;
+    font-size: 30px;
+    font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
 }
 
 
@@ -85,7 +84,7 @@ header.flex-container-lvl2-navigation {
         /*5 header - navigation - list - list items - a*/
         .Header-navigationlist-lvl4 li a {
             /*FONT*/
-            font-family: Courier New, Courier, monospace;
+            font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
             font-size: 100%; /*Fit text to size of container*/
             color: white; /*color of link text*/
             /*Transition between hover and non-hover*/
@@ -239,9 +238,9 @@ header.flex-container-lvl2-navigation {
 
 /*UI Right Side positioning - locked to right side.*/
 .UI-Container-lvl1-all {
-    display: inline-block; 
+    display: inline-block;
     position: absolute;
-    font-family: 'Century Gothic';
+    font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     right: 2vw;
     height: 200vh;
 }
@@ -553,6 +552,7 @@ video {
     cursor: pointer;
     position: relative;
     z-index: 999;
+    
 }
 
     .btn-type-2:before {
@@ -568,8 +568,8 @@ video {
         animation: glowing 20s linear infinite;
         opacity: 0.9;
         border-radius: 20px;
-        -webkit-mask: radial-gradient( circle, transparent 50%, black 100% );
-        mask: radial-gradient( circle, transparent 40%, black 100% );
+        -webkit-mask: radial-gradient( circle, transparent 40%, black 100% );
+        mask: radial-gradient( circle, transparent 30%, black 100% );
     }
 
     .btn-type-2:hover {
@@ -718,7 +718,7 @@ video {
 
 h2 {
     font: #2b2c28;
-    font-family: 'Century gothic', Courier, monospace;
+    font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     font-size: clamp(1.8rem, 5vw, 3rem);
     /*margin-top: 1rem;*/
     text-align: left;
@@ -728,7 +728,7 @@ h2 {
 
 h3 {
     font: #2b2c28;
-    font-family: 'Century gothic', Courier, monospace;
+    font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     font-size: clamp(1.2rem, 4vw, 2rem);
     padding: 0 1rem;
     padding-top: 1rem;
@@ -776,7 +776,7 @@ section.nopadding{
         line-height: 1.2;
         margin-bottom: 1rem;
         font: #2b2c28;
-        font-family: 'Century gothic', Courier, monospace;
+        font-family: "Century Gothic", "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
     }
 
     #intro #hello_email {
