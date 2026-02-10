@@ -765,6 +765,9 @@ section.nopadding{
     background: #fec3a6;
     text-align: center;
 }
+#intro a {
+    text-shadow: none; /* subtle shadow */
+}
 
     #intro #intro_bio {
         flex: 1 1 300px; /* flexible + responsive */
