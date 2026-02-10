@@ -787,6 +787,10 @@ section {
     flex-wrap: wrap;*/
 }
 
+section.nopadding{
+    padding: 0px;
+}
+
 /* Intro section image */
 #intro {
     display: flex;
@@ -1104,7 +1108,7 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 1rem;
-    border: none;
+    border: 7px ridge #FF915F; /* keep separate from full-width border */
     border-radius: 14px;
     padding: 1rem;
     box-sizing: border-box;
